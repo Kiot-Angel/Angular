@@ -1,0 +1,87 @@
+<div class="product_image">
+
+  <img src="https://demo.w3layouts.com/demos_new/30-01-2017/electronic_store-demo_Free/192355906/web/images/bg1.jpg" class="img-fluid" alt="Responsive image">
+
+  <div class="top-left" style="font-size:2vw;">
+    GREAT OFFERS ON
+    <br>
+    <span style="color: red">MOBILE</span>
+    <br> FLAT 35% DISCOUNT
+  </div>
+</div>
+
+<div class="container-fluid mt-5">
+  <div class="row">
+    <div class="container col-sm-4 mb-3">
+
+      <h2 class="my_Product_Categories">Categories</h2>
+
+      <input type="text" [(ngModel)]="searchText"
+             class="form-control" placeholder="Search By Name"  />
+
+    </div>
+    <div class="col-sm-8">
+
+      <div class="container product_image">
+        <div class="row">
+          <div class="col">
+
+            <img src="https://demo.w3layouts.com/demos_new/30-01-2017/electronic_store-demo_Free/192355906/web/images/46.jpg" class="img-fluid">
+            <div class="centered">SMART PHONES
+              <br> <span style="color: red">UP TO</span>
+              <br> 15% Discount
+            </div>
+          </div>
+          <div class="col">
+            <img src="https://demo.w3layouts.com/demos_new/30-01-2017/electronic_store-demo_Free/192355906/web/images/47.jpg" class="img-fluid">
+            <div class="centered">TOP 10 Latest
+              <br> <span style="color: red">Mobile</span>
+              <br> & Accessories
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col">
+            <p id="result">SHOWING RESULT</p>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <select class="form-control" id="exampleFormControlSelect1" (change)="sort($event)">
+                <option >SORT BY POPULARITY</option>
+                <option >SORT BY AVERAGE RATING</option>
+                <option>SORT BY PRICE: LOW TO HIGH</option>
+                <option>SORT BY PRICE: HIGH TO LOW</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container row card-group align-items-center">
+        <div class="mt-5 col-4" @fade *ngFor="let mydata of data | sortBy : searchText">
+          <div class="card">
+            <a [routerLink]="['/presentation', mydata._id]">
+                <div class="view overlay zoom">
+                  <img src="{{mydata.url}}" class="img-fluid">
+                </div>
+            </a>
+          </div>
+                    <span><a  class="row my_Product_title" (click)="callfn(mydata)"routerLink="/viewProduct" >{{mydata.title}}</a></span>
+
+          <p class="my_Product_Price"> &#8377;<b>{{mydata.Price}}</b></p>
+          <div class="text-center">
+            <button mat-raised-button color="primary" (click)="cart()" >Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-5"></div>
+
+    </div>
+  </div>
+
+</div>

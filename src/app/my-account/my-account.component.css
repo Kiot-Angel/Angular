@@ -1,0 +1,45 @@
+.my_name{
+  display: block;
+  left: 20%;
+  font-weight: 500;
+  font-size: 1.4em;
+}
+.header_prop{
+  top: 15%;
+  left: 20%;
+
+}
+
+/*.dashboard_view_dis{*/
+/*  @left: 50%;*/
+/*}*/
+
+.my_account_dash{
+  color: blue;
+  font-weight: 500;
+  cursor: pointer;
+  left: 50%;
+  letter-spacing: 2px;
+}
+
+.try_me{
+  color:red;
+}
+
+.dashboard_head{
+  text-align: center;
+ top:50%;
+}
+.my_class{
+  left: 25%;
+  padding: 0px 20px;
+  letter-spacing: 2px;
+}
+
+label{
+  font-weight: 500;
+}
+
+.my_class_1{
+  border-radius: 50%;
+}

@@ -1,0 +1,224 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "SMART PHONE 1",
+      "Price": "24500",
+      "url": "https://demo.w3layouts.com/demos_new/30-01-2017/electronic_store-demo_Free/192355906/web/images/27.jpg"
+    },
+    {
+      "id": 2,
+      "title": "SMART PHONE 2",
+      "Price": "50500",
+      "url": "https://demo.w3layouts.com/demos_new/30-01-2017/electronic_store-demo_Free/192355906/web/images/28.jpg",
+      "product_quantity": null,
+      "product_description": "My Description"
+    },
+    {
+      "id": 3,
+      "title": "SMART PHONE 3",
+      "Price": "21500",
+      "url": "https://demo.w3layouts.com/demos_new/30-01-2017/electronic_store-demo_Free/192355906/web/images/29.jpg"
+    },
+    {
+      "id": 4,
+      "title": "SMART PHONE 4",
+      "Price": "13500",
+      "url": "https://demo.w3layouts.com/demos_new/30-01-2017/electronic_store-demo_Free/192355906/web/images/30.jpg"
+    },
+    {
+      "id": 5,
+      "title": "SMART PHONE 5",
+      "Price": "23500",
+      "url": "https://demo.w3layouts.com/demos_new/30-01-2017/electronic_store-demo_Free/192355906/web/images/31.jpg"
+    },
+    {
+      "id": 6,
+      "title": "My SMART PHONE",
+      "Price": "42000",
+      "url": "https://demo.w3layouts.com/demos_new/30-01-2017/electronic_store-demo_Free/192355906/web/images/35.jpg",
+      "product_quantity": null,
+      "product_description": null
+    },
+    {
+      "id": 7,
+      "title": "SMART PHONE 7",
+      "Price": "25000",
+      "url": "https://demo.w3layouts.com/demos_new/30-01-2017/electronic_store-demo_Free/192355906/web/images/p6.jpg",
+      "product_quantity": null,
+      "product_description": null
+    },
+    {
+      "id": 8,
+      "title": "SMART PHONE 8",
+      "Price": "10500",
+      "url": "https://demo.w3layouts.com/demos_new/30-01-2017/electronic_store-demo_Free/192355906/web/images/p5.jpg"
+    },
+    {
+      "id": 9,
+      "title": "SMART PHONE 9 AVC",
+      "Price": "17500",
+      "url": "https://demo.w3layouts.com/demos_new/30-01-2017/electronic_store-demo_Free/192355906/web/images/p4.jpg",
+      "product_quantity": null,
+      "product_description": null
+    }
+  ],
+  "user": [
+    {
+      "id": "9efb8de1-e76b-4eb3-8118-dc879e09a095",
+      "title": "Miss",
+      "firstName": "uyyuy",
+      "lastName": "yuyyuy",
+      "email": "test1@mail",
+      "password": "uyuyuyu",
+      "mobile": 7898898989,
+      "address": "Noida",
+      "acceptTerms": true
+    },
+    {
+      "id": "e3efca76-61ab-42bb-83cf-d1fccf6652b3",
+      "email": "@admin",
+      "password": "password",
+      "address": "Gurgaon"
+    },
+    {
+      "id": "38ac76bb-eac5-46a5-a842-1cbdd3c1aa7d",
+      "title": "Miss",
+      "firstName": "uyyuy",
+      "lastName": "yuyyuy",
+      "email": "test@mail",
+      "password": "uyuyuyu",
+      "mobile": 7898898989,
+      "address": "New Delhi",
+      "acceptTerms": true
+    },
+    {
+      "id": "bfd2a56e-3aaa-45d3-a5dd-61008ec0e8f5",
+      "title": "Ms",
+      "firstName": "yuyu",
+      "lastName": "uyuyuy",
+      "email": "raju@mail",
+      "password": "password",
+      "mobile": 989889,
+      "address": "Greater Noida",
+      "acceptTerms": true
+    },
+    {
+      "id": "8d3cf6df-eef2-4868-8aff-f06e30ecb23d",
+      "title": "Mr",
+      "firstName": "Ankit",
+      "lastName": "Goel",
+      "address": "New Delhi",
+      "email": "ankit@mail.com",
+      "password": "password",
+      "mobile": 9868032896,
+      "acceptTerms": true
+    },
+    {
+      "id": "a15744f8-3c4f-46c9-a914-2c7a189e8bff",
+      "title": "Mr",
+      "firstName": "Ankit",
+      "lastName": "Goel",
+      "address": "New Delhi",
+      "email": "ask.ankitgoel@gmail.com",
+      "password": "I@mwhatiam1",
+      "mobile": 9868032896,
+      "acceptTerms": true
+    },
+    {
+      "id": "e1c9e202-25e2-4833-b04f-5400af4d4e12",
+      "title": "Mrs",
+      "firstName": "xyx",
+      "lastName": "yzzx",
+      "address": "bdfgfd",
+      "email": "testmymail@mail.com",
+      "password": "I@mwhjjhh",
+      "mobile": 8989898984949,
+      "acceptTerms": true
+    },
+    {
+      "id": "24303165-1520-4036-904a-5d776a0cae2e",
+      "title": "Miss",
+      "firstName": "testme",
+      "lastName": "testme",
+      "address": "New delhi",
+      "email": "testme@mail",
+      "password": "tytytytyytt",
+      "mobile": 98786545123,
+      "acceptTerms": true
+    },
+    {
+      "id": "bd5cd6b1-4070-4e3d-ac75-fbc296bc9bfc",
+      "title": "Ms",
+      "firstName": "jhjjhjhj2",
+      "lastName": "hjhjhjhj",
+      "address": "hghgvghhvjvgvvhh",
+      "email": "hjhjhjhj@hjhjjhjh",
+      "password": "ioioiioioioio",
+      "mobile": 98989889,
+      "acceptTerms": true
+    },
+    {
+      "id": "0a71a45f-7f07-4126-a673-4ad7344ff539",
+      "title": "Mrs",
+      "firstName": "yuyy",
+      "lastName": "yyuyy",
+      "address": "jhhjhjhjh",
+      "email": "uyyyyy@Yuyuyuy",
+      "password": "yuyuyuyuyu",
+      "mobile": 9898989898,
+      "acceptTerms": true
+    },
+    {
+      "id": "140d9470-2da6-437d-b260-5dc2fa9baf8c",
+      "title": "Miss",
+      "firstName": "uyuyuy",
+      "lastName": "yuyuyuy",
+      "address": "bbbnbnbbn",
+      "email": "uyuyuyuyu@yuyu",
+      "password": "uyuyuyuyyyuyu",
+      "mobile": 98989889898,
+      "acceptTerms": true
+    },
+    {
+      "id": "efd09a05-beb8-49e5-9ff2-fedf74bbbffb",
+      "title": "Mrs",
+      "firstName": "test_abc_123",
+      "lastName": "Test",
+      "address": "yyytytytt",
+      "email": "test_abc_123@mail.com",
+      "password": "poiuytrewq",
+      "mobile": 9876543210,
+      "acceptTerms": true
+    }
+  ],
+  "comments": [
+    {
+      "username": "Product 9",
+      "email": "myemail@mail",
+      "comments": "My Message ",
+      "productTitle": "SMART PHONE 9",
+      "productId": 9,
+      "timeStamp": "Sat Oct 05 2019 22:01:37 GMT+0530 (India Standard Time)",
+      "id": 5
+    },
+    {
+      "username": "Ankit Goel",
+      "email": "myemail@mail",
+      "comments": "My Message is here !",
+      "productTitle": "SMART PHONE 9",
+      "productId": 9,
+      "timeStamp": "Sat Oct 05 2019 22:19:09 GMT+0530 (India Standard Time)",
+      "id": 6
+    },
+    {
+      "username": "testmy name",
+      "email": "test my mail",
+      "comments": "test my Comment",
+      "productTitle": "SMART PHONE 2",
+      "productId": 2,
+      "timeStamp": "Sat Oct 05 2019 22:28:34 GMT+0530 (India Standard Time)",
+      "id": 7
+    }
+  ]
+}

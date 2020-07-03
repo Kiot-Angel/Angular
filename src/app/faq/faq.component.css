@@ -1,0 +1,35 @@
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+
+}
+.temp{
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 2.5em;
+}
+
+.faq_question{
+  color: #212121;
+  font-family: 'Glegoo', serif;
+  font-weight: 500;
+  line-height: 1.5em;
+  font-size: 1.4em
+}
+
+.faq_answer{
+  color: #999;
+  line-height: 1.8em;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  word-spacing: 4px;
+  font-weight: 500;
+  padding: 10px;
+}
+
+#faq_detail{
+  padding: 30px;
+}

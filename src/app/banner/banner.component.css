@@ -1,0 +1,111 @@
+.banner{
+  background-image:url(../../assets/electronicbanner.jpg);
+  text-align: center;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  a-o-background-size: cover;
+  background-size: cover;
+}
+
+
+.custom-class {
+  display: flex;
+}
+
+.banner-text{
+  padding:200px 0 150px 0;
+}
+.banner-heading{
+  font-family: 'Lobster', cursive;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 100px;
+  margin-bottom: 30px;
+  color:#fff;
+}
+.banner-sub-heading{
+  font-family: 'Libre Baskerville', serif;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 50px;
+  color:#fff;
+}
+.btn-banner{
+  padding:5px 20px;
+  border-radius:10px;
+  font-weight:700;
+  line-height:1.5;
+  text-align:center;
+  color:#fff;
+  text-transform:uppercase;
+}
+@media (max-width:768px){
+  .banner-text{
+    padding:150px 0 150px 0;
+  }
+  .banner-sub-heading{
+    font-size: 23px;
+    font-weight: 200;
+    line-height: 23px;
+    margin-bottom: 40px;
+  }
+}
+
+.banner_1 .img{
+  height: 500px;
+  width: 100px;
+}
+
+
+.my_data{
+  padding: 10px 10px 0px;
+  border: 2px solid white;
+  top:40%;
+  /*left: 30%;*/
+}
+.top-center {
+  position: absolute;
+  font-size: 15px;
+  color: white;
+  top: 30%;
+  left: 40%;
+}
+.top-center_time {
+  position: absolute;
+  font-size: 15px;
+  color: white;
+  top: 55%;
+  left: 33%;
+}
+#discount{
+  color: #ff5063;
+  font-size: 3em;
+  font-weight: 700;
+  top: 25%;
+  right: 14%;
+  position: absolute;
+}
+#timer_wrap{
+  /*opacity: 0.3;
+  */
+  filter: brightness(90%);
+}
+#carousel_header{
+  font-family: 'Glegoo', serif;
+  font-size: 40px;
+  word-spacing: 10px;
+  text-align: center;
+}
+.carousel_12{
+  height: 300px;
+}
+
+.align_middle{
+  padding: 0px 5px;
+  letter-spacing: 4px;
+}

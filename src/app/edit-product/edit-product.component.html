@@ -1,0 +1,97 @@
+<div class="container-fluid">
+  <table class="table">
+    <thead class="thead-dark">
+    <tr>
+      <th scope="col">Select</th>
+      <th scope="col">Image</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Product Quantity</th>
+      <th scope="col">Product Id</th>
+      <th scope="col">Product Description</th>
+      <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr @fade *ngFor=" let product_data of  data">
+      <td>
+        <input type="checkbox" (change)="selectID(product_data.id)">
+      </td>
+      <td><img src="{{product_data.url}}" class="img-fluid" style="height: 100px;"></td>
+      <td>{{product_data.title}}</td>
+      <td>{{product_data.Price}}</td>
+      <td>{{product_data.product_quantity}}</td>
+      <td>{{product_data.id}}</td>
+      <td class="text-center">{{product_data.product_description}}</td>
+      
+      <td>
+        <button mat-raised-button color="accent" (click)="callme(product_data)">Edit</button>
+      </td>
+    </tr>
+
+    </tbody>
+    <tfoot>
+    <button type="button" class="btn btn-danger" (click)="deleteSelected()">Delete Selected Product</button>&nbsp;
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Click to ADD Product</button>
+
+    </tfoot>
+
+  </table>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Product</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Product Name</label>
+              <input type="text" class="form-control" placeholder="Product Name" formControlName="title">
+            </div>
+
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Product Price</label>
+              <input type="text" class="form-control" placeholder="Product Price" formControlName="Price">
+            </div>
+
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Product Description</label>
+              <input type="text" class="form-control" placeholder="Product Discription" formControlName="product_description">
+            </div>
+
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Product Image Url</label>
+              <input type="text" class="form-control" placeholder="Image Url" formControlName="url">
+            </div>
+
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Quantity</label>
+              <input type="number" class="form-control" placeholder="Enter Quantity" min=1 max=30 formControlName="product_quantity">
+            </div>
+
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Generate Unique Product ID</label>
+              <div class="row">
+                <div class="col">
+                  <input type="button" (click)="gen()" value="Generate">
+                </div>
+                <div class="col">
+                  <input class="form-control" placeholder="{{this.id}}" formControlName="id" readonly>
+                </div>
+              </div>
+            </div>
+            <button mat-raised-button color="accent">Add Product</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

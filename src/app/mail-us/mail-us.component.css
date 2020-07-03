@@ -1,0 +1,33 @@
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+
+}
+.temp{
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 2.5em;
+}
+
+#mail_header{
+  color: #212121;
+  font-family: 'Glegoo', serif;
+  font-weight: 500;
+}
+
+#mail_us_header{
+  color: #3c43a4;
+  font-weight: 500;
+  font-family: 'Glegoo', serif;
+  line-height: 1.1;
+}
+.mail_us_add{
+  color: #999;
+  text-transform: capitalize;
+  font-family: 'Open Sans', sans-serif;
+}
+
+

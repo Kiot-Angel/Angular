@@ -1,0 +1,20 @@
+#top{
+  margin-top: 120px;
+}
+
+#edit_header{
+  font-family: 'Glegoo', serif;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+form{
+  padding: 20px;
+}
+
+
+.usr_comm{
+  font-family: 'Glegoo', serif;
+  font-weight: 500;
+  line-height: 1.1;
+}

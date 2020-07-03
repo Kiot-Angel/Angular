@@ -1,0 +1,189 @@
+<header>
+  <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+  <!------ Include the above in your HEAD tag ---------->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="banner">
+    <div class="container">
+
+      <a class="navbar-brand" href="#">
+       <span >Electronic </span> Store
+        <small style="font-size: 14px ;display: block">Your Store <span style="font-size: 14px">Your Place</span></small>
+      </a>
+      <br>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="mailUS">MAIL US</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/about">ABOUT US</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              PRODUCTS
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" routerLink="/products">HOME</a>
+              <a class="dropdown-item" routerLink="/products">ACCESSORIES</a>
+              <a class="dropdown-item" routerLink="/products">MOBILE</a>
+              <a class="dropdown-item" *ngIf="isAdmin" routerLink="/editProduct">EDIT PRODUCTS</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div *ngIf="!headerIcon; else prompt">
+              <i class="fa fa-user-circle fa-2x" aria-hidden="true" style="cursor: pointer;color: white; margin-top: 15px" data-toggle="modal" data-target="#myModal"></i>
+            </div>
+            <ng-template #prompt>
+              <div id="hand_tool">
+              <p class="nav-link" (click)="signout()"> Signout <i class="fa fa-sign-out" aria-hidden="true"></i></p>
+              </div>
+            </ng-template>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title" style="font-family: 'Glegoo', serif;font-size: 1.5em;padding-left: 1.5em;">Dont Wait, Login Now!...</h4>
+          <button type="button" class="close" data-dismiss="modal" #closeAddExpenseModal>&times;</button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <!-- main app container -->
+          <div class="basic-container">
+            <mat-tab-group mat-stretch-tabs>
+              <mat-tab label="SIGN IN">
+                <div class="container">
+                  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+                    <div class="mt-2 form-group">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input type="email" class="form-control" formControlName="email" placeholder="Enter email">
+                      <small class="form-text text-muted" *ngIf="loginForm.controls.email.touched && loginForm.controls.email.errors?.required">
+                       <p style="color: red"> Please enter email address.!</p>
+                      </small>
+                      <small class="form-text text-muted" *ngIf="loginForm.controls.email.touched && loginForm.controls.email.errors?.email">
+                       <p style="color:red;"> Email address not well formed.!</p>
+                      </small>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" class="form-control" formControlName="password" placeholder="Password">
+                      <small class="form-text text-muted" *ngIf="loginForm.controls.password.touched && loginForm.controls.password.errors?.minlength">
+                        <p style="color:red;"> Password should be greater than 6 digits</p>
+                      </small>
+                    </div>
+                    <button [disabled]="!loginForm.valid" mat-raised-button color="primary">SIGN IN</button>
+                    <div *ngIf="error" class="alert alert-danger mt-3 mb-0">Username or Password is Incorrect</div>
+                    <div *ngIf="isLoggedin" class="alert alert-success mt-3 mb-0">Login Successful</div>
+                  </form>
+                </div>
+              </mat-tab>
+              <mat-tab label="SIGNUP">
+                <div class="card m-3">
+                  <div class="card-body">
+                    <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+                      <div class="form-row">
+                        <div class="form-group col">
+                          <label>Title</label>
+                          <select formControlName="title" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.title.errors }">
+                            <option value="Mr">Mr</option>
+                            <option value="Mrs">Mrs</option>
+                            <option value="Miss">Miss</option>
+                            <option value="Ms">Ms</option>
+                          </select>
+                          <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+                            <div *ngIf="f.title.errors.required">Title is required</div>
+                          </div>
+                        </div>
+                        <div class="form-group col-5">
+                          <label>First Name</label>
+                          <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                          <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                            <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                          </div>
+                        </div>
+                        <div class="form-group col-5">
+                          <label>Last Name</label>
+                          <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                          <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+<!--                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">-->
+<!--                          <div *ngIf="f.email.errors.required">Email is required</div>-->
+
+<!--                        </div>-->
+                        <p
+                          style="color: red"
+                          *ngIf="registerForm.get('email').errors?.userNameExists">Sorry! Already Taken</p>
+<!--                        <div *ngIf="f.email.errors.email">Email must be a valid email address</div>-->
+                        <small class="form-text text-muted" *ngIf="registerForm.controls.email.touched && registerForm.controls.email.errors?.required">
+                          <p style="color: red"> Please enter email address.!</p>
+                        </small>
+                        <small class="form-text text-muted" *ngIf="registerForm.controls.email.touched && registerForm.controls.email.errors?.email">
+                          <p style="color:red;"> Email address not well formed.!</p>
+                        </small>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col">
+                          <label>Password</label>
+                          <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                          <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                            <div *ngIf="f.password.errors.required">Password is required</div>
+                            <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                          </div>
+                        </div>
+                        <div class="form-group col">
+                          <label>MOBILE </label>
+                          <input type="number" formControlName="mobile" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }" />
+                          <div *ngIf="submitted && f.mobile.errors" class="invalid-feedback">
+                            <div *ngIf="f.mobile.errors.required">Mobile Number is required</div>
+                          </div>
+                        </div>
+                        <div class="form-group col">
+                          <label>Address </label>
+                          <input type="text" formControlName="address" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.address.errors }" />
+                          <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+                            <div *ngIf="f.address.errors.required">Address is required</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group form-check">
+                        <input type="checkbox" formControlName="acceptTerms" id="acceptTerms" class="form-check-input" [ngClass]="{ 'is-invalid': submitted && f.acceptTerms.errors }" />
+                        <label for="acceptTerms" class="form-check-label">Accept Terms & Conditions</label>
+                        <div *ngIf="submitted && f.acceptTerms.errors" class="invalid-feedback">Accept Ts & Cs is required</div>
+                      </div>
+                      <div class="text-center">
+                        <button mat-raised-button color="primary">CREATE ACCOUNT</button> &nbsp;
+
+                        <button mat-raised-button color="accent" type="reset" (click)="onReset()">RESET</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </mat-tab>
+            </mat-tab-group>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
