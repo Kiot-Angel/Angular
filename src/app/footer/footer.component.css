@@ -1,0 +1,18 @@
+#onHoverclass :hover{
+    color: blue;
+}
+.onHoverclassTwiter :hover{
+    color: #00ACEE;
+}
+
+.onHoverclassGoogle :hover{
+    color:  #db4a39;
+}
+
+.onHoverclassInsta :hover{
+    color: #3f729b;
+}
+
+.onHoverclassLI  :hover{
+    color: #0e76a8;
+}

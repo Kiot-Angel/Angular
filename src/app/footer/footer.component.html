@@ -1,5 +1,8 @@
 <!-- Footer -->
-<footer class="page-footer font-small blue-grey lighten-5 mt-20">
+<footer class="page-footer font-small blue-grey lighten-5 mt-5">
+
+
+
 
   <div style="background-color: #21d192;">
     <div class="container">
@@ -9,7 +12,7 @@
 
         <!-- Grid column -->
         <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-          <h6 class="mb-0">Get connected with us on social networks!</h6>
+          <h6 class="mb-0" >Get connected with us on social networks!</h6>
         </div>
         <!-- Grid column -->
 
@@ -17,27 +20,27 @@
         <div class="col-md-6 col-lg-7 text-center text-md-right">
 
           <!-- Facebook -->
-          <a class="fb-ic">
+          <a class="fb-ic" id="onHoverclass">
             <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
           </a>
           &nbsp;
           <!-- Twitter -->
-          <a class="tw-ic">
+          <a class="tw-ic" class="onHoverclassTwiter">
             <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
           </a>
           &nbsp;
           <!-- Google +-->
-          <a class="gplus-ic">
+          <a class="gplus-ic" class="onHoverclassGoogle">
             <i class="fa fa-google-plus fa-lg" aria-hidden="true"></i>
           </a>
           &nbsp;
           <!--Linkedin -->
-          <a class="li-ic">
+          <a class="li-ic" class="onHoverclassLI">
             <i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i>
           </a>
           &nbsp;
           <!--Instagram-->
-          <a class="ins-ic">
+          <a class="ins-ic" class="onHoverclassInsta">
             <i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
           </a>
 
@@ -60,39 +63,42 @@
       <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
 
         <!-- Content -->
-        <h6 class="text-uppercase font-weight-bold">Company name</h6>
-        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-        <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <h6 class="text-uppercase font-weight-bold" style="font-family: 'Glegoo', serif;font-family: 'Glegoo', serif;font-size: 1.5em;font-weight: 500;">Company name</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="height: 1px;width: 50%;background: #3c43a4;color: #3c43a4;">
+        <p style="color: #999;">Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 
       </div>
 
       <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
 
-        <h6 class="text-uppercase font-weight-bold">Products</h6>
-        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-        <p><a class="dark-grey-text" routerLink="/products">MOBILES</a></p>
+        <h6 class="text-uppercase font-weight-bold">CATEGORY</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="height: 1px;width: 30%;background: #3c43a4;">
+        <p><i class="fa fa-long-arrow-right"></i><a class="dark-grey-text" routerLink="/products" style="color: #999; text-decoration: none;">
+          
+               MOBILES</a></p>
 
-        <p><a class="dark-grey-text" routerLink="/products">LAPTOP</a></p>
+        <p><i class="fa fa-long-arrow-right"></i><a class="dark-grey-text" routerLink="/products" style="color: #999;" > LAPTOP</a></p>
 
-        <p><a class="dark-grey-text" routerLink="/products">PURIFIERS</a></p>
+        <p><i class="fa fa-long-arrow-right"></i><a class="dark-grey-text" routerLink="/products" style="color: #999;">    PURIFIERS</a></p>
 
-        <p><a class="dark-grey-text" routerLink="/products">KITCHEN</a></p>
+        <p><i class="fa fa-long-arrow-right"></i><a class="dark-grey-text" routerLink="/products" style="color: #999;">  KITCHEN</a></p>
 
       </div>
 
       <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
 
         <!-- Links -->
-        <h6 class="text-uppercase font-weight-bold">Useful links</h6>
-        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-        <p><a class="dark-grey-text" data-toggle="modal" data-target="#exampleModal" href="#" (click)="checkdetails()">Your Account</a></p>
+        <h6 class="text-uppercase font-weight-bold">INFORMATION</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="height: 1px;width: 50%;background: #3c43a4;">
+        <p><i class="fa fa-long-arrow-right"></i>
+          <a class="dark-grey-text" data-toggle="modal" data-target="#exampleModal" href="#" (click)="checkdetails()" style="color: #999;"> Your Account</a></p>
 
-        <p><a class="dark-grey-text" routerLink="/about">ABOUT US</a></p>
+        <p><i class="fa fa-long-arrow-right"></i><a class="dark-grey-text" routerLink="/about" style="color: #999;"> ABOUT US</a></p>
 
-        <p><a class="dark-grey-text" routerLink="mailUS">CONTACT US</a>
+        <p><i class="fa fa-long-arrow-right"></i><a class="dark-grey-text" routerLink="mailUS" style="color: #999;">  CONTACT US</a>
         </p>
-        <p>
-          <a class="dark-grey-text" routerLink="/faq">FAQ's</a>
+        <p><i class="fa fa-long-arrow-right"></i>
+          <a class="dark-grey-text" routerLink="/faq" style="color: #999;"> FAQ's</a>
         </p>
       </div>
       <!-- Grid column -->
@@ -102,13 +108,13 @@
 
         <!-- Links -->
         <h6 class="text-uppercase font-weight-bold">Contact</h6>
-        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="height: 1px; ;width: 20%;background: #3c43a4;">
         <p>
-          <i class="fa fa-home fa-lg" style="color:#21d192;"> </i>WZ-78, ND 10012, IN</p>
+          <i class="fa fa-home fa-lg" style="color:#21d192; "> </i><span style="color: #999;"> WZ-78, ND 10012, IN</span></p>
         <p>
-          <i class="fa fa-envelope fa-lg" style="color:#21d192;"></i> info@example.com</p>
+          <i class="fa fa-envelope fa-lg" style="color:#21d192;"></i><span style="color: #999;"> info@example.com</span></p>
         <p>
-          <i class="fa fa-phone fa-lg" style="color:#21d192 ;"></i> + 01 234 567 88</p>
+          <i class="fa fa-phone fa-lg" style="color:#21d192 ;"></i><span style="color: #999;"> + 01 234 567 88</span> </p>
 
       </div>
 
@@ -116,7 +122,7 @@
 
   </div>
   <div class="footer-copyright text-center text-black-50 py-3">© 2019 Electronic Store. All rights reserved :
-    <a class="dark-grey-text" href="#"> Mystore@electronic.com</a>
+    <a class="dark-grey-text" href="mailto:Mystore@electronic.com"> Mystore@electronic.com</a>
   </div>
 
   <div *ngIf="tocheck">
