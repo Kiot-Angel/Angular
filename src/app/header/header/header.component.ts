@@ -37,7 +37,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
       id: [''],
-      title: ['', Validators.required],
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
       address: ['', Validators.required],

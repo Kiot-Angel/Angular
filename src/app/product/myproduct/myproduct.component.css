@@ -27,15 +27,21 @@
   font-family: 'Glegoo', serif;
   font-size: 1.4em;
   color: #212121;
-
+  font-weight: 500;
+  line-height: 1.1;
 }
 
 .my_Product_title {
   color: #ff5063;
   transition: .5s all;
   font-weight: 700;
-  text-align: center;
-  padding: 25px 50px 0px;
+  text-decoration: none;
+  /* padding: 25px 50px 0px; */
+}
+
+#product_Name :hover{
+  color: #337ab7;
+  font-size: 18px;
 }
 
 .my_Product_Price{
