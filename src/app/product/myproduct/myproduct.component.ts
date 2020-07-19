@@ -24,7 +24,9 @@ export class MyproductComponent implements OnInit {
   column: string = 'Price';
   selectedDay: string = '';
   Price: any;
-
+  max = 100;
+  min:any;
+  searchText: any;
   constructor(private http: HttpClient, private dataService: ProductServiceService) {
 
   }

@@ -1,42 +1,44 @@
 <div class="container-fluid">
+
+  <div class="table-responsive">
   <table class="table">
     <thead class="thead-dark">
     <tr>
-      <th scope="col">Select</th>
+      <th>Actions</th>
       <th scope="col">Image</th>
       <th scope="col">Name</th>
       <th scope="col">Price</th>
       <th scope="col">Product Quantity</th>
       <th scope="col">Product Id</th>
       <th scope="col">Product Description</th>
-      <th scope="col">Actions</th>
     </tr>
     </thead>
     <tbody>
-    <tr @fade *ngFor=" let product_data of  data">
+    <tr @fade *ngFor="let product_data of  data">
       <td>
-        <input type="checkbox" (change)="selectID(product_data.id)">
+        <input type="checkbox" (change)="selectID(product_data.id)"> &nbsp;
+        <button mat-raised-button color="warn" (click)="selectID(product_data.id)"><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp; Delete</button> &nbsp;
+          <button mat-raised-button color="accent" (click)="callme(product_data)"><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp; Edit</button>
       </td>
-      <td><img src="{{product_data.url}}" class="img-fluid" style="height: 100px;"></td>
+      <td><img src="{{product_data.url}}" class="img-fluid" style="height: 100px;   border-radius: 190px;"></td>
       <td>{{product_data.title}}</td>
       <td>{{product_data.Price}}</td>
       <td>{{product_data.product_quantity}}</td>
       <td>{{product_data.id}}</td>
       <td class="text-center">{{product_data.product_description}}</td>
       
-      <td>
-        <button mat-raised-button color="accent" (click)="callme(product_data)">Edit</button>
-      </td>
+      
     </tr>
 
     </tbody>
     <tfoot>
-    <button type="button" class="btn btn-danger" (click)="deleteSelected()">Delete Selected Product</button>&nbsp;
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Click to ADD Product</button>
+    <button type="button" class="btn btn-danger" (click)="deleteSelected()"><i class="fa fa-trash-o" aria-hidden="true"></i>&nbsp; Delete Selected Product</button>&nbsp;
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-cloud-upload" aria-hidden="true"></i>&nbsp; Click to ADD Product</button>
 
     </tfoot>
 
   </table>
+  </div>
 </div>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -54,27 +56,42 @@
 
             <div class="form-group">
               <label for="exampleFormControlInput1">Product Name</label>
-              <input type="text" class="form-control" placeholder="Product Name" formControlName="title">
+              <input type="text" class="form-control" placeholder="Product Name" formControlName="title" [ngClass]="{ 'is-invalid': submitted && f.title.errors }" />
+              <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+                <div *ngIf="f.title.errors.required">Product Name is required</div>
+            </div>
             </div>
 
             <div class="form-group">
               <label for="exampleFormControlInput1">Product Price</label>
-              <input type="text" class="form-control" placeholder="Product Price" formControlName="Price">
+              <input type="text" class="form-control" placeholder="Product Price" formControlName="Price" [ngClass]="{ 'is-invalid': submitted && f.Price.errors }" />
+              <div *ngIf="submitted && f.Price.errors" class="invalid-feedback">
+                <div *ngIf="f.Price.errors.required">Price is required</div>
+            </div>
             </div>
 
             <div class="form-group">
               <label for="exampleFormControlInput1">Product Description</label>
-              <input type="text" class="form-control" placeholder="Product Discription" formControlName="product_description">
+              <input type="text" class="form-control" placeholder="Product Discription" formControlName="product_description" [ngClass]="{ 'is-invalid': submitted && f.product_description.errors }" />
+              <div *ngIf="submitted && f.product_description.errors" class="invalid-feedback">
+                <div *ngIf="f.product_description.errors.required">Product Description is required</div>
+            </div>
             </div>
 
             <div class="form-group">
               <label for="exampleFormControlInput1">Product Image Url</label>
-              <input type="text" class="form-control" placeholder="Image Url" formControlName="url">
+              <input type="text" class="form-control" placeholder="Image Url" formControlName="url" [ngClass]="{ 'is-invalid': submitted && f.url.errors }" />
+              <div *ngIf="submitted && f.url.errors" class="invalid-feedback">
+                <div *ngIf="f.url.errors.required">Product Image Url is required</div>
+            </div>
             </div>
 
             <div class="form-group">
               <label for="exampleFormControlInput1">Quantity</label>
-              <input type="number" class="form-control" placeholder="Enter Quantity" min=1 max=30 formControlName="product_quantity">
+              <input type="number" class="form-control" placeholder="Enter Quantity" min=1 max=30 formControlName="product_quantity" [ngClass]="{ 'is-invalid': submitted && f.product_quantity.errors }" />
+              <div *ngIf="submitted && f.product_quantity.errors" class="invalid-feedback">
+                <div *ngIf="f.product_quantity.errors.required">Product Quantity is required</div>
+            </div>
             </div>
 
             <div class="form-group">
@@ -88,7 +105,7 @@
                 </div>
               </div>
             </div>
-            <button mat-raised-button color="accent">Add Product</button>
+            <button mat-raised-button color="accent"><i class="fa fa-cloud-upload" aria-hidden="true"></i>&nbsp; Add Product</button>
           </form>
         </div>
       </div>

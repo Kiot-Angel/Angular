@@ -9,10 +9,10 @@
     {
       "id": 2,
       "title": "SMART PHONE 2",
-      "Price": "50500",
+      "Price": "50501",
       "url": "https://demo.w3layouts.com/demos_new/30-01-2017/electronic_store-demo_Free/192355906/web/images/28.jpg",
-      "product_quantity": null,
-      "product_description": "My Description"
+      "product_quantity": 100,
+      "product_description": "SAMPLE PRODUCT"
     },
     {
       "id": 3,

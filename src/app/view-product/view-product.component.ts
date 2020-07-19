@@ -17,8 +17,8 @@ export class ViewProductComponent implements OnInit {
   constructor(private fb: FormBuilder, private serviceproduct: ProductServiceService, private service: MydataService) { }
   data: any;
   submitted = false;
-  private evaluate: boolean;
-  private evaluate1: boolean;
+  public evaluate: boolean;
+  public evaluate1: boolean;
   submitComm: FormGroup;
   tocheck: boolean;
 title;

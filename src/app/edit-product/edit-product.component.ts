@@ -24,6 +24,7 @@ export class EditProductComponent implements OnInit {
   data: any;
   registerForm: FormGroup;
   id: any;
+  submitted = false;
   SelectedIDs: any = [];
   newArr: any = [];
   // tslint:disable-next-line:max-line-length
@@ -43,6 +44,8 @@ export class EditProductComponent implements OnInit {
       product_description: ['', Validators.required]
     });
   }
+
+  get f() { return this.registerForm.controls; }
 
   // Generate Unique ID
   public gen() {
@@ -81,6 +84,13 @@ export class EditProductComponent implements OnInit {
 
   // Add Product
   onSubmit() {
+    this.submitted = true;
+
+    // stop here if form is invalid
+    if (this.registerForm.invalid) {
+        return;
+    }
+
       this.myservice.add_product(this.registerForm.value).subscribe( data => {
           setTimeout(() => {
           alert('Product Added Successfully');

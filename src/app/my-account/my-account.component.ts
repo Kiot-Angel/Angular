@@ -13,6 +13,14 @@ export class MyAccountComponent implements OnInit {
   name = 'Angular';
   dashboard: boolean;
   order: boolean;
+  email: any;
+  lastName: any;
+  mobile: any;
+  try_me: any;
+  f: any;
+  onSubmit:any;
+  evaluate: any;
+  evaluate1: any;
   edit_account: boolean;
   edit_address: boolean;
   user_info: boolean;

@@ -6,29 +6,45 @@
     <div class="col">
       <h2 class="text-center" id="edit_header"> Edit Product</h2>
       <form class="mt-3" [formGroup]="updateForm" (ngSubmit)="onSubmit()">
+
         <div class="form-group">
           <label>Product Name</label>
-          <input type="text" value="{{title}}" formControlName="title" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+          <input type="text" value="{{title}}" formControlName="title" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.title.errors }" />
+          <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+            <div *ngIf="f.title.errors.required">Product Name is required</div>
+        </div>
         </div>
 
         <div class="form-group">
           <label>Product Price</label>
-          <input type="text" formControlName="Price" value="{{price}}" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+          <input type="text" formControlName="Price" value="{{price}}" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Price.errors }" />
+          <div *ngIf="submitted && f.Price.errors" class="invalid-feedback">
+            <div *ngIf="f.Price.errors.required">Price is required</div>
+        </div>
         </div>
 
         <div class="form-group">
           <label>Product Description</label>
-          <input type="text" value="{{product_description}}" formControlName="product_description" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+          <input type="text" value="{{product_description}}" formControlName="product_description" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.product_description.errors }" />
+          <div *ngIf="submitted && f.product_description.errors" class="invalid-feedback">
+            <div *ngIf="f.product_description.errors.required">Product Description is required</div>
+        </div>
         </div>
 
         <div class="form-group">
           <label>Product Image Url</label>
-          <input type="text" value="{{url}}" formControlName="url" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+          <input type="text" value="{{url}}" formControlName="url" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.url.errors }" />
+          <div *ngIf="submitted && f.url.errors" class="invalid-feedback">
+            <div *ngIf="f.url.errors.required">Product Image Url is required</div>
+        </div>
         </div>
 
         <div class="form-group">
           <label>Quantity</label>
-          <input type="text" placeholder="{{product_quantity}}" formControlName="product_quantity" min=1 max=30 class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+          <input type="text" placeholder="{{product_quantity}}" formControlName="product_quantity" min=1 max=30 class="form-control" [ngClass]="{ 'is-invalid': submitted && f.product_quantity.errors }" />
+          <div *ngIf="submitted && f.product_quantity.errors" class="invalid-feedback">
+            <div *ngIf="f.product_quantity.errors.required">Product Quantity is required</div>
+        </div>
         </div>
 
         <div class="form-group">

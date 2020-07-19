@@ -34,6 +34,7 @@ export class EditProductDetailsComponent implements OnInit {
 
   updateForm: FormGroup;
   submitted = false;
+  
   mydata: any;
   mydata2: any;
   chartview: boolean;
@@ -63,7 +64,7 @@ export class EditProductDetailsComponent implements OnInit {
       id: [this.service.getid(), Validators.required],
       title: [this.service.gettitle(), Validators.required],
       Price: [this.service.getPrice() , Validators.required],
-      url: [this.service.geturl(), [Validators.required, Validators.email]],
+      url: [this.service.geturl(), Validators.required],
       product_quantity: [this.service.getproduct_quantity(), Validators.required],
       product_description: [this.service.getproduct_description(), Validators.required]
     });
@@ -77,7 +78,17 @@ export class EditProductDetailsComponent implements OnInit {
 
   }
 
+  get f() { return this.updateForm.controls; }
+
   onSubmit() {
+
+    this.submitted = true;
+
+    // stop here if form is invalid
+    if (this.updateForm.invalid) {
+        return;
+    }
+
       this.service.update_product(this.updateForm.value).subscribe(data => {
         alert('Successfully Updated');
       }, error => {
