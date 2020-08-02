@@ -2,26 +2,36 @@
   width: 100%;
 }
 .product_image{
-  position: relative;
+  
   text-align: center;
   color: white;
 }
 .top-left {
   position: absolute;
-  top: 98px;
+  top: 15%;
   padding: 2em 0 0;
-  font-size: 1.6em;
-  left: 76px;
+  left: 8%;
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 3px;
 }
 .centered {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 65%;
   transform: translate(-50%, -50%);
-  font-size: 1.6em;
+  font-size: 5.5vmin;
+  color: white;
 }
+
+.centered1 {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  font-size: 5vmin;
+  color: white;
+}
+
 
 #result{
   font-family: 'Glegoo', serif;
@@ -29,6 +39,7 @@
   color: #212121;
   font-weight: 500;
   line-height: 1.1;
+  float: left;
 }
 
 .my_Product_title {
@@ -39,9 +50,15 @@
   /* padding: 25px 50px 0px; */
 }
 
+/* .product_Name{
+  text-align: center;
+  justify-content: center;
+} */
+
 #product_Name :hover{
   color: #337ab7;
   font-size: 18px;
+  white-space: nowrap;
 }
 
 .my_Product_Price{

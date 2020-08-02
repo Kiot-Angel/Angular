@@ -1,13 +1,46 @@
-.top-left {
-  position: absolute;
-  top: 40%;
-  left: 10%;
-  color: white;
-  font-family: 'Glegoo', serif;
-  font-weight: 500;
-  font-size: 2.5em;
-  transform: translate(-50%, -50%);
+.banner{
+  background-image:url(../../assets/electronicbanner.jpg);
+  text-align: center;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  a-o-background-size: cover;
+  background-size: cover;
 }
+
+
+.banner-text{
+  padding:200px 0 150px 0;
+}
+.banner-heading{
+  font-family: 'Lobster', cursive;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 100px;
+  margin-bottom: 30px;
+  color:#fff;
+}
+.banner-sub-heading{
+  font-family: 'Libre Baskerville', serif;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 50px;
+  color:#fff;
+}
+.btn-banner{
+  padding:5px 20px;
+  border-radius:10px;
+  font-weight:700;
+  line-height:1.5;
+  text-align:center;
+  color:#fff;
+  text-transform:uppercase;
+}
+
 #image_box{
   border: 1px solid #C0C0C0;
 }
@@ -21,7 +54,11 @@ h2{
   font-weight: 500;
   line-height: 1.1;
   font-size: 1.5em;
-  margin-bottom: 1em;
+  padding-bottom: 10px ;
+  float: left;
+  font-family: 'Glegoo', serif;
+  text-align: center;
+
 }
 
 .rating-list li {
@@ -40,7 +77,7 @@ h2{
   list-style: none;
 }
 
-#single_des{
+.single_des{
   color: #3c43a4;
   font-size: 1.3em;
   font-family: 'Glegoo', serif;
@@ -56,8 +93,8 @@ h2{
 }
 
 .dot {
-  height: 25px;
-  width: 25px;
+  height: 15px;
+  width: 15px;
   background-color: red;
   border-radius: 50%;
   display: inline-block;
@@ -65,6 +102,10 @@ h2{
 }
 .purple{
   background-color: #00008c;;
+}
+
+#quantity_Icon{
+  padding: 0px 10px;
 }
 
 .brown{
@@ -91,13 +132,13 @@ i{
 .circle_val {
   height: 32px;
   width: 32px;
-  background-color: #A9A9A9;
-  border-radius: 50%;
+  background-color:  #E5E5E5;
+  border: 1px solid #E5E5E5;;
   display: inline-block;
   font-weight: 600;
   margin-top: 5px;
   font-size: 19px;
-  color: white
+  color:#A9A9A9;
 }
 
 #single_add_review{
@@ -110,34 +151,35 @@ i{
 
 #my_box{
   background: #f3f3f3;
-  padding: 20px;
-  margin: 30px;
 }
 
 #reviews{
   font-family: 'Glegoo', serif;
   padding-bottom: 10px;
-  font-size: 1.2em;
+  font-size: 5vmin;
   color: #212121;
   font-weight: 500;
   line-height: 1.1;
 }
 
 .prod_descp{
-  font-size: 1em;
+  font-size: 5vmin;
   color: #212121;
   margin-bottom: 2em;
   font-family: 'Glegoo', serif;
   font-weight: 500;
   line-height: 1.1;
+  
 }
 
 .prod_descp1 {
   color: #999;
   line-height: 1.8em;
   font-size: 14px;
+
 }
 .my_Product_Price{
   text-align: left;
   font-size: 20px;
 }
+

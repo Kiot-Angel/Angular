@@ -18,7 +18,9 @@
       "id": 3,
       "title": "SMART PHONE 3",
       "Price": "21500",
-      "url": "https://demo.w3layouts.com/demos_new/30-01-2017/electronic_store-demo_Free/192355906/web/images/29.jpg"
+      "url": "https://demo.w3layouts.com/demos_new/30-01-2017/electronic_store-demo_Free/192355906/web/images/29.jpg",
+      "product_quantity": "100",
+      "product_description": "MOBILE"
     },
     {
       "id": 4,

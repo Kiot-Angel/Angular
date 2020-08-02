@@ -1,183 +1,195 @@
-<img src="https://demo.w3layouts.com/demos_new/30-01-2017/electronic_store-demo_Free/192355906/web/images/b1.jpg" class="img-fluid" alt="Responsive image" style="height:40vw; width:100%">
-<div class="top-left" style="font-size: 4vw">My Product</div>
-
-<div class="mt-5 container">
-  <div class="row">
-    <div class="col">
-      <img src="{{data.url}}" class="img-fluid" alt="Responsive image" id="image_box">
-    </div>
-
-    <div class="col">
-      <div class="row">
-        <h2 id="single_header">{{data.title}}</h2>
+<div class="banner">
+  <div class="container">
+      <div class="banner-text">
+          <button type="button" class="btn btn-warning text-dark btn-banner">
+              Get started
+          </button>
       </div>
-
-      <div class="row">
-        <div class="col-sm-12">
-          <ul class="list-inline rating-list" *ngFor="let star of stars" style="display: inline-block">
-            <li (click)="countStar(star)" [ngClass]="{'selected': (star <= selectedValue)}">
-              <i class="fa fa-star"></i>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <h3 id="single_des">Description</h3>
-      <p class="text-left" id="single_data">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <h5>COLOR:</h5>
-            <div class="options">
-              <span class="dot "></span>
-              <span class="dot purple"></span>
-              <span class="dot brown"></span>
-              <span class="dot pink"></span>
-            </div>
-          </div>
-          <div class="col">
-            <h5>QUANTITY:</h5>
-            <div class="row">
-              <i class="fa fa-minus-circle  fa-2x" (click)="reduce()" aria-hidden="true" style="color:green;cursor: pointer; "></i>
-              <span class="circle_val text-center">{{count}}</span>
-              <i class="fa fa-plus-circle  fa-2x" (click)="increase()" aria-hidden="true" style="color:green; cursor: pointer; "></i>
-            </div>
-          </div>
-        </div>
-        <p class="mt-2 my_Product_Price"> &#8377;<b>{{data.Price}}/-</b></p>
-        <button mat-stroked-button color="primary" class="mt-3">Add to Cart</button>
-      </div>
-
-    </div>
   </div>
 </div>
 
 <div class="mt-5 container">
   <div class="row">
-    <div class="col align-self-start">
-      <div class="row">
-        <div class="col-sm">
-          <button mat-raised-button color="primary" (click)="forprod()">Product Information</button>
-          <button mat-raised-button color="accent" class="ml-2" (click)="forrev()">Reviews</button>
-        </div>
+      <div class="col-sm-4">
+          <div class="container">
+              <img src="{{data.url}}" class="img-fluid" alt="Responsive image" id="image_box" />
+          </div>
       </div>
-    </div>
+
+      <div class="col-sm-8">
+          &nbsp;
+          <div class="row">
+              <div class="container">
+                  <h2 id="single_header">{{data.title}}</h2>
+                  <!-- <h2 class="col" id="single_header">data.title</h2> -->
+              </div>
+          </div>
+
+          <div class="row">
+              <ul class="list-inline rating-list float-left pl-2" *ngFor="let star of stars" style="display: inline-block;">
+                  <li (click)="countStar(star)" [ngClass]="{'selected': (star <= selectedValue)}">
+                      <i class="fa fa-star"></i>
+                  </li>
+              </ul>
+          </div>
+
+          <h3 class="single_des">
+              <i>Description</i>
+          </h3>
+          <p class="text-justify" id="single_data">
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+              fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+          </p>
+
+          <div class="row">
+              <div class="col-sm">
+                  <h5 class="single_des"><i>Color:</i></h5>
+                  <div class="options">
+                      <span class="dot"></span>
+                      <span class="dot purple"></span>
+                      <span class="dot brown"></span>
+                      <span class="dot pink"></span>
+                  </div>
+              </div>
+              <div class="col-sm">
+                  <h5 class="single_des"><i>Quality:</i></h5>
+                  <div class="row">
+                      <div id="quantity_Icon">
+                          <i class="fa fa-minus-square-o fa-2x" (click)="reduce()" aria-hidden="true" style="cursor: pointer;"></i>
+                      </div>
+
+                      <span class="circle_val text-center">{{count}}</span>
+
+                      <div id="quantity_Icon">
+                          <i class="fa fa-plus-square-o fa-2x" (click)="increase()" aria-hidden="true" style="cursor: pointer;"></i>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <p class="mt-2 my_Product_Price">&#8377;<b>{{data.Price}}/-</b></p>
+          <button mat-stroked-button color="primary" class="mt-3">Add to Cart</button>
+      </div>
+  </div>
+</div>
+
+<div class="mt-5 container">
+  <div class="row pl-4">
+      <div class="col align-self-start">
+          <div class="row">
+              <div class="col-sm">
+                  <button mat-raised-button color="primary" (click)="forprod()">Product Information</button>
+                  <button mat-raised-button color="accent" class="ml-2" (click)="forrev()">Reviews</button>
+              </div>
+          </div>
+      </div>
   </div>
 
   <div *ngIf="evaluate1">
-    <div class="mt-5 container" id="my_box">
-      <h4 id="reviews">(2) Reviews</h4>
-      <div class="row">
-        <div class="col-sm">
-          <img src="https://demo.w3layouts.com/demos_new/30-01-2017/electronic_store-demo_Free/192355906/web/images/t1.png" class="img-fluid" alt="Responsive image">
-        </div>
-        <div class="col-6">
-          <div class="row">
-            <p>Laura
-              <br>
-              <span style="color: #3c43a4;">Oct 06, 2016</span></p>
-            <br>
-            <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
+      <div class="mt-5 container" id="my_box">
+          <div class="container" style="padding: 10px;">
+              <h4 id="reviews">(2) Reviews</h4>
           </div>
 
-        </div>
-        <div class="col-sm">
-          <!-- <ul class="list-inline rating-list" *ngFor="let star of stars" style="display: inline-block">
-            <li (click)="countStar(star)" [ngClass]="{'selected': (star <= selectedValue)}">
-              <i class="fa fa-star"></i>
-            </li>
-          </ul> -->
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm">
-          <img src="https://demo.w3layouts.com/demos_new/30-01-2017/electronic_store-demo_Free/192355906/web/images/t2.png" class="img-fluid" alt="Responsive image">
-        </div>
-        <div class="col-6">
           <div class="row">
-            <p><span style="color: #212121;font-size: 1em;text-decoration: none;">Michael</span>
-              <br>
-              <span style="color: #3c43a4;">Oct 06, 2016</span></p>
-            <br>
-            <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
+              <div class="col-3 text-center">
+                  <img src="https://demo.w3layouts.com/demos_new/30-01-2017/electronic_store-demo_Free/192355906/web/images/t1.png" class="img-fluid" alt="Responsive image" />
+              </div>
+              <div class="col-7">
+                  <div class="row">
+                      <p>
+                          Laura
+                          <br />
+                          <span style="color: #3c43a4;">Oct 06, 2016</span>
+                      </p>
+                      <p style="color: #999;">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
+                  </div>
+              </div>
           </div>
+
           <div class="row">
+              <div class="col-3 text-center">
+                  <img src="https://demo.w3layouts.com/demos_new/30-01-2017/electronic_store-demo_Free/192355906/web/images/t2.png" class="img-fluid" alt="Responsive image" />
+              </div>
+              <div class="col-7">
+                  <div class="row">
+                      <p>
+                          Michael
+                          <br />
+                          <span style="color: #3c43a4;">Oct 06, 2016</span>
+                      </p>
+                      <p style="color: #999;">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="col-sm">
-          <!-- <ul class="list-inline rating-list" *ngFor="let star of stars" style="display: inline-block">
-            <li (click)="countStar(star)" [ngClass]="{'selected': (star <= selectedValue)}">
-              <i class="fa fa-star"></i>
-            </li>
-          </ul> -->
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-sm" id="single_add_review">Add A Review</div>
+          <div class="row">
+              <div class="col-sm" id="single_add_review">Add A Review</div>
 
-        <div class="col-6">
+              <div class="col-6">
+                  <div class="mt-5 container">
+                      <form [formGroup]="submitComm" (ngSubmit)="submitComments()">
+                          <div class="row">
+                              <div class="col">
+                                  <input type="text" placeholder="Your Name" formControlName="username" class="form-control" />
+                              </div>
+                              <div class="col">
+                                  <input type="email" placeholder="Your Email" formControlName="email" class="form-control" />
 
-          <div class="mt-5 container">
-            <form [formGroup]="submitComm" (ngSubmit)="submitComments()">
-              <div class="row">
-                <div class="col">
-                  <input type="text" placeholder="Your Name" formControlName="username" class="form-control">
-                </div>
-                <div class="col">
-                  <input type="email" placeholder="Your Email" formControlName="email" class="form-control">
+                                  <div *ngIf="submitted && f.email.errors?.required" style="color: red;">Email is required</div>
+                                  <div *ngIf="submitted && f.email.errors?.email" style="color: red;">Email must be valid</div>
+                              </div>
+                          </div>
 
-                    <div *ngIf="submitted && f.email.errors?.required" style="color: red">Email is required</div>
-                    <div *ngIf="submitted && f.email.errors?.email" style="color: red">Email must be valid</div>
-
-                </div>
+                          <div class="mt-4 row">
+                              <div class="col">
+                                  <textarea class="form-control" formControlName="comments" id="exampleFormControlTextarea1" rows="7" placeholder="Message..."></textarea>
+                              </div>
+                          </div>
+                          <div class="mt-3">
+                              <button mat-raised-button color="accent" data-toggle="modal" data-target="#exampleModal" class="mb-5" style="padding: 0px 60px;">Submit</button>
+                          </div>
+                      </form>
+                  </div>
               </div>
 
-              <div class="mt-4 row">
-                <div class="col">
-                  <textarea class="form-control" formControlName="comments" id="exampleFormControlTextarea1" rows="7" placeholder="Message..."></textarea>
-                </div>
-              </div>
-              <div class="mt-3">
-                <button mat-raised-button color="accent" data-toggle="modal" data-target="#exampleModal" class="mb-5" style="padding: 0px 60px">Submit</button>
-              </div>
-            </form>
+              <div class="col-4"></div>
           </div>
-
-        </div>
-
-        <div class="col-4">
-        </div>
-
       </div>
-
-    </div>
   </div>
-
+  &nbsp;
   <div *ngIf="evaluate">
-    <div class="container" id="my_box">
-      <h3><span class="prod_descp">The Best 3GB RAM Mobile Phone</span></h3>
-      <span class="prod_descp1">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</span>
-    </div>
+      <div class="container justify-content-center" id="my_box">
+          <div class="container" style="padding: 20px;">
+              <h3>
+                  <span class="prod_descp"> <p style="padding: 20px 0px; font-family: 'Glegoo', serif; font-weight: 500; white-space: nowrap;">The Best 3GB RAM Mobile Phone</p></span>
+              </h3>
+              <span class="prod_descp1">
+                  <p class="text-justify">
+                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                      aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+                      consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
+                  </p>
+              </span>
+          </div>
+      </div>
   </div>
-
 </div>
 
 <div *ngIf="tocheck">
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"><i class="fa fa-smile-o fa-lg" aria-hidden="true"></i> SUCCESS!</h5>
-        </div>
-        <div class="modal-body">
-          <i>Review Saved Successfully !..</i>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel"><i class="fa fa-smile-o fa-lg" aria-hidden="true"></i> SUCCESS!</h5>
+              </div>
+              <div class="modal-body">
+                  <i>Review Saved Successfully !..</i>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+          </div>
       </div>
-    </div>
   </div>
 </div>

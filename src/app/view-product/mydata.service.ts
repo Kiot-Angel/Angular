@@ -15,7 +15,10 @@ export class MydataService {
         'Content-Type':  'application/json',
       })
     };
-   return this.http.post('http://localhost:5050/comments', data, httpOptions);
+
+   // https://electronicstore-d5621.firebaseio.com/comments
+    return this.http.post('https://electronicstore-d5621.firebaseio.com/comments', data, httpOptions);
+  // return this.http.post('http://localhost:5050/comments', data, httpOptions);
   }
 
 }

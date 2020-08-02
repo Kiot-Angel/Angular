@@ -40,7 +40,9 @@ export class MyserviceService {
   }
 
   login(username: string, password: string) {
-    return this.http.get<any>('http://localhost:5050/user');
+
+    return this.http.get<any>('https://electronicstore-d5621.firebaseio.com/user.json');
+   // return this.http.get<any>('http://localhost:5050/user');
   }
 
   register2(myuser: any) {
@@ -49,12 +51,9 @@ export class MyserviceService {
       'Content-Type':  'application/json'
     })
   };
-    return this.http.post('http://localhost:5050/user', myuser , httpOptions);
+  return this.http.post('https://electronicstore-d5621.firebaseio.com/user.json', myuser , httpOptions);
+  //  return this.http.post('http://localhost:5050/user', myuser , httpOptions);
 }
-
-    get_user(mydata) {
-    return this.http.get<any>('http://localhost:5050/', mydata);
-    }
 
 
   // Aysnc Validation

@@ -11,7 +11,15 @@ export class ProductServiceService {
   
 
   get_products() {
-    return this.http.get('http://localhost:5050/posts');
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, DELETE, PUT',
+        'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With'
+      })
+    };
+    return this.http.get('https://electronicstore-d5621.firebaseio.com/posts.json', httpOptions);
   }
 
   delete_products(id) {
@@ -20,7 +28,8 @@ export class ProductServiceService {
         'Content-Type':  'application/json',
       })
     };
-    const url = `http://localhost:5050/posts/${id}`;
+    const url = `https://electronicstore-d5621.firebaseio.com/posts${id}.json`
+    //const url = `http://localhost:5050/posts/${id}`;
     console.log(url);
     return this.http.delete(url, httpOptions);
   }
@@ -31,7 +40,8 @@ export class ProductServiceService {
         'Content-Type':  'application/json'
       })
     };
-    return this.http.post('http://localhost:5050/posts', data , httpOptions);
+      return this.http.post('https://electronicstore-d5621.firebaseio.com/posts.json',data, httpOptions)
+  //  return this.http.post('http://localhost:5050/posts', data , httpOptions);
   }
 
 

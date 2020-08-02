@@ -20,6 +20,10 @@ import { ChartsModule } from 'ng2-charts';
 import { ViewProductComponent } from './view-product/view-product.component';
 import {CountdownModule} from 'ngx-countdown';
 import { MyAccountComponent } from './my-account/my-account.component';
+import { AngularFireModule } from "angularfire2";
+import { environment } from 'src/environments/environment.prod';
+import { AngularFireDatabaseModule } from "angularfire2/database";
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -45,7 +49,10 @@ import { MyAccountComponent } from './my-account/my-account.component';
     ReactiveFormsModule,
     ProductModule,
     ChartsModule,
-    CountdownModule
+    CountdownModule,
+   AngularFireModule.initializeApp(environment.firebaseConfig),
+   AngularFireDatabaseModule,
+   NgxPaginationModule
   ],
   exports: [MaterialModuleModule],
   providers: [AuthGuardGuard],

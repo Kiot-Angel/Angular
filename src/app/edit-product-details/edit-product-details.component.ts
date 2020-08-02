@@ -90,6 +90,7 @@ export class EditProductDetailsComponent implements OnInit {
     }
 
       this.service.update_product(this.updateForm.value).subscribe(data => {
+        console.log('Data After Updation ', data)
         alert('Successfully Updated');
       }, error => {
         console.log('Error Occured', error);

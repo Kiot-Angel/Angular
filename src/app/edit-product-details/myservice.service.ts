@@ -30,7 +30,27 @@ export class MyserviceService {
       })
     };
 
-    return this.http.put('http://localhost:5050/posts/' + data.id, {
+
+
+//     function doMySearch(showTitle) {
+//       showTitle = escapeShowTitle(showTitle)
+//       var url = "http://graph.facebook.com/search?q=" + showTitle + "&type=page"
+//     //  doSomethingWith(url)
+//  }
+ 
+//  function escapeShowTitle(title) {
+//      title = title.replace(/'/g, "")
+//      title = escape(title)
+//      return title
+//  }
+ 
+//  doMySearch("America's Funniest home Videos")
+
+
+var checkm = "id";
+   
+    return this.http.put(`https://electronicstore-d5621.firebaseio.com/posts.json?orderBy=%22id%22&equalTo=${data.id}&print=pretty`, {
+   // return this.http.put('http://localhost:5050/posts/' + data.id, {
       "id": data.id,
       "title": data.title,
       "Price": data.Price,
@@ -41,7 +61,7 @@ export class MyserviceService {
   }
 
   get_comments(id: any) {
-    return this.http.get('http://localhost:5050/comments?productId=' + id);
+    return this.http.get('http://localhost:5050/comments?productId='+id);
   }
 
   public setp(v : any) {
