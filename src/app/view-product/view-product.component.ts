@@ -42,18 +42,18 @@ title;
   }
 
   forprod() {
-    this.evaluate = true;
-    this.evaluate1 = false;
-  }
-
-  forrev() {
     this.evaluate = false;
     this.evaluate1 = true;
   }
 
+  forrev() {
+    this.evaluate = true;
+    this.evaluate1 = false;
+  }
+
   countStar(star) {
-    this.selectedValue = star;
     star = 4 ;
+    this.selectedValue = star;
   }
 
   reduce() {

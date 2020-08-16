@@ -199,13 +199,6 @@
 
 
 
-
-
-
-
-
-
-
       <div class="col-sm-8">
           <div class="container">
               <div class="row">
@@ -249,7 +242,7 @@
           <div class="container row card-group justify-content-center">
 
 
-              <div class="mt-3 col-4" @fade *ngFor="let mydata of data | sortBy: searchText ">
+              <div class="mt-3 col-4 justify-content-center" @fade *ngFor="let mydata of data | sortBy: searchText ">
                   <div class="card mb-1 justify-content-center" style="width: 14rem; border: 0;">
                       <a [routerLink]="['/presentation', mydata._id]">
                           <!-- <div class="view overlay zoom"> -->

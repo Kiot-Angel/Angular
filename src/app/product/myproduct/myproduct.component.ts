@@ -34,7 +34,7 @@ export class MyproductComponent implements OnInit {
   ngOnInit() {
     this.dataService.get_products().subscribe(data => {
       this.data = data;
-      console.log(data);
+
     });
   }
 

@@ -2,13 +2,13 @@
   width: 100%;
 }
 .product_image{
-  
+  position: relative;
   text-align: center;
   color: white;
 }
 .top-left {
   position: absolute;
-  top: 15%;
+  top: 5%;
   padding: 2em 0 0;
   left: 8%;
   font-family: 'Open Sans', sans-serif;
